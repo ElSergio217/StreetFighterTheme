@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Nav/>
 
-        <Header imgPath="./img/Logo.PNG" start="Push start button" credit="1" copyright="© SERGIO GARCIA 2019"/>
+        <Header imgPath="./img/Logo.png" start="Push start button" credit="1" copyright="© SERGIO GARCIA 2019"/>
 
         <About 
           maxLevel="5"
