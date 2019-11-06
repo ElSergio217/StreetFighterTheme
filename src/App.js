@@ -7,9 +7,10 @@ import About from './components/about/about';
 import Work from './components/work/work';
 import Contact from './components/contact/contact';
 
+
 class App extends Component {
 
-  render() {
+  render() { 
     return (
       <div className="App">
         <Nav/>
@@ -19,11 +20,11 @@ class App extends Component {
         <About 
           maxLevel="5"
           skills= {[
-            {"name": "FRONT-END DEVELOPMENT", "level" : 4}, 
-            {"name": "BACKEND DEVELOPMENT", "level" : 4}, 
-            {"name": "GAME DEVELOPMENT", "level" : 3}, 
-            {"name": "MOBILE DEVELOPMENT", "level" : 2}, 
-            {"name": "IMMERSIVE TECHNOLOGY", "level" : 4}, 
+            {"name": "FRONT-END DEVELOPMENT", "level" : 4, "key":1}, 
+            {"name": "BACKEND DEVELOPMENT", "level" : 4, "key":2}, 
+            {"name": "GAME DEVELOPMENT", "level" : 3, "key":3}, 
+            {"name": "MOBILE DEVELOPMENT", "level" : 2, "key":4}, 
+            {"name": "IMMERSIVE TECHNOLOGY", "level" : 4, "key":5}, 
           ]}
           github="https://github.com/ElSergio217"
           linkedin="https://www.linkedin.com/in/sgarcia217/"
