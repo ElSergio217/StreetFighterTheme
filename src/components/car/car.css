@@ -1,5 +1,6 @@
 .car:active {
-    width: 490px;
+    max-width: 630px;
+    width: 100%;
 }
 
 .car{
