@@ -3,5 +3,6 @@
 }
 
 .car{
-    width: 500px;
+    max-width: 645px;
+    width: 100%;
 }
