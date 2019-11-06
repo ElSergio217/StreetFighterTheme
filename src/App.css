@@ -92,3 +92,7 @@ body:before {
   width: 100%;
   height: auto;  
 }
+
+.clickable{
+  cursor: pointer;
+}

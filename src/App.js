@@ -14,21 +14,21 @@ class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      carFrame: 2,
+      carFrame: 1,
       clicks: 0,
-      carUrl: "/img/car/1.png"
+      credit: 0
     }
     this.carHit = this.carHit.bind(this);
+    this.insertCoin = this.insertCoin.bind(this);
   }
    carHit(e) {
     e.preventDefault();
 
-    if(this.state.clicks >= 3){
+    if(this.state.clicks >= 1){
       if(this.state.carFrame !== 15){
         this.setState({ 
           clicks: 0,
           carFrame: this.state.carFrame + 1,
-          carUrl : "./img/car/" + this.state.carFrame + ".png"
         });
       }
     }
@@ -40,6 +40,13 @@ class App extends Component {
     console.log(this.state)
   }
 
+  insertCoin(e){
+    e.preventDefault();
+    this.setState({ 
+      credit: this.state.credit + 1,
+    });
+  }
+
 
   render() { 
 
@@ -47,7 +54,7 @@ class App extends Component {
       <div className="App">
         <Nav/>
 
-        <Header imgPath="./img/Logo.png" start="Push start button" credit="1" copyright="© SERGIO GARCIA 2019"/>
+        <Header imgPath="./img/Logo.png" start="Push start button" credit={this.state.credit} copyright="© SERGIO GARCIA 2019" func={this.insertCoin}/>
 
         <About 
           maxLevel="5"
@@ -64,7 +71,7 @@ class App extends Component {
           name="Sergio Garcia" 
         />
 
-        <Car func={this.carHit} frame={this.state.carUrl}/>
+        <Car func={this.carHit} frame={this.state.carFrame}/>
 
 
         <Work 

@@ -7,7 +7,7 @@ const Work= (props) => {
       
     <div className="black-back text-center">
         <h1 className="grey-with-red">bonus stage</h1>
-        <img src={props.frame} onClick={props.func} alt="car" className="car"/>
+        <img src={"/img/car/" + props.frame + ".png"} onClick={props.func} alt="car" className="car"/>
     </div>
   );
 };

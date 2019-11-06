@@ -14,8 +14,8 @@ const Header= (props) => {
                 <h1 className="grey-with-red clickable" >{props.start}</h1>
             </Link>
             
-            <h2 className="noselect grey-with-red" id="addcredit" >
-                Credit <span className="yellow-with-darkyellow" id="credit_count">1</span>
+            <h2 className="noselect grey-with-red clickable" id="addcredit" onClick={props.func} >
+                Credit <span className="yellow-with-darkyellow" id="credit_count">{props.credit}</span>
             </h2>
 
             <h2 className="yellow-with-darkyellow" > {props.copyright}</h2>
