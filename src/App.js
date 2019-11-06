@@ -6,11 +6,43 @@ import Header from './components/header/header';
 import About from './components/about/about';
 import Work from './components/work/work';
 import Contact from './components/contact/contact';
+import Car from './components/car/car';
 
 
 class App extends Component {
 
+  constructor (props) {
+    super(props);
+    this.state = {
+      carFrame: 2,
+      clicks: 0,
+      carUrl: "/img/car/1.png"
+    }
+    this.carHit = this.carHit.bind(this);
+  }
+   carHit(e) {
+    e.preventDefault();
+
+    if(this.state.clicks >= 3){
+      if(this.state.carFrame !== 15){
+        this.setState({ 
+          clicks: 0,
+          carFrame: this.state.carFrame + 1,
+          carUrl : "./img/car/" + this.state.carFrame + ".png"
+        });
+      }
+    }
+    else{
+      this.setState({ 
+        clicks: this.state.clicks + 1,
+      });
+    }
+    console.log(this.state)
+  }
+
+
   render() { 
+
     return (
       <div className="App">
         <Nav/>
@@ -31,6 +63,8 @@ class App extends Component {
           instagram="https://www.instagram.com/elsergio217/"
           name="Sergio Garcia" 
         />
+
+        <Car func={this.carHit} frame={this.state.carUrl}/>
 
 
         <Work 
