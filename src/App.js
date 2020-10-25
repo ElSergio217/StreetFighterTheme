@@ -54,7 +54,7 @@ class App extends Component {
       <div className="App">
         <Nav/>
 
-        <Header imgPath="./img/Logo.png" start="Push start button" credit={this.state.credit} copyright="© SERGIO GARCIA 2019" func={this.insertCoin}/>
+        <Header imgPath="./img/Logo.png" start="Push start button" credit={this.state.credit} copyright="© SERGIO GARCIA 2020" func={this.insertCoin}/>
 
         <About 
           maxLevel="5"

@@ -7,7 +7,7 @@ const Contact= () => {
         <div className="container">
    
                 <h1 className="grey-with-red text-center">Contact</h1>
-                <h2 className="yellow-with-darkyellow text-center">sergioa.garcia217@gmail.com</h2>
+                <a href = "mailto: sergio@elsergiogarcia.com"><h2 className="yellow-with-darkyellow text-center">sergio@elsergiogarcia.com</h2></a>
 
         </div>
     </section>
