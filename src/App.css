@@ -96,3 +96,33 @@ body:before {
 .clickable{
   cursor: pointer;
 }
+
+.overlay {
+  color: #6f6;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  font-size: 60px;
+
+  animation:overlay 1s 1;
+  -webkit-animation:overlay 1s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay:3s;
+  -webkit-animation-delay:3s; /* Safari and Chrome */
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes overlay{
+  from {opacity :1;}
+  to {opacity :0;}
+}
+
+@-webkit-keyframes overlay{
+  from {opacity :1;}
+  to {opacity :0;}
+}
+
+.form-control-lg {
+  font-size: 24px;
+}

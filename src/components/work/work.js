@@ -5,7 +5,7 @@ const Work= (props) => {
   return(
 
     <section className="content-section black-back" id="portfolio">
-      <div className="container">
+      <div className="container-fluid">
         <h1 className="grey-with-red text-center">Featured Projects</h1>
         <br />
         <br />
@@ -20,7 +20,7 @@ const Work= (props) => {
                   <p className="mb-0">{i.desc}</p>
                 </span>
               </span>
-              <img className="img-fluid" src={i.img} alt="" />
+              <img className="img-fluid w-100" src={i.img} alt="" />
             </a>
           </div>
         ))}
